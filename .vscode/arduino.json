@@ -1,0 +1,7 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "src\\arduino\\PrecipitationSamplerSlave\\Test\\Thermistors\\Thermistors.ino",
+    "port": "COM5",
+    "programmer": "avrispmkii",
+    "output": "src/arduino/out"
+}
