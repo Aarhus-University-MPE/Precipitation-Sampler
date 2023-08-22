@@ -6,6 +6,7 @@
 
 #include <AccelStepper.h>
 
+#define PO_STEPPER_EN      4   // Stepper enable signal to all steppers
 #define PO_VERTICAL_STP    5   // Height stepper-step signal
 #define PO_VERTICAL_DIR    7   // Height stepper direction signal
 #define PI_SWITCH_VERTICAL 12  // Height limmitswitch
@@ -18,7 +19,7 @@
 #define VERTICAL_CLEARING  200  // How many steps to be clear of needles  TODO: Verify
 
 // Setup Pump stepper
-AccelStepper stepperVertical(1, PO_VERTICAL_STP, PO_VERTICAL_DIR);
+AccelStepper stepperVertical(PO_STEPPER_EN, PO_VERTICAL_STP, PO_VERTICAL_DIR);
 
 // Related compoents
 bool heightSwitch;

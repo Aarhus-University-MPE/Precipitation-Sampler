@@ -4,6 +4,7 @@
 
 #include <AccelStepper.h>
 
+#define PO_STEPPER_EN   4   // Stepper enable signal to all steppers
 #define PI_SWITCH_UPPER 13  // Sample wheel encoding switch (Sample hole)
 #define PI_SWITCH_LOWER 11  // Sample wheel encoding switch (Flush hole)
 
@@ -19,7 +20,7 @@ bool switchB = false;  // Encoder Switch (Lower) - Purge Position
 uint8_t stepperProcess = 0;  // Process variable
 
 // Setup Wheel stepper
-AccelStepper stepperWheel(1, PO_WHEEL_STP, 0);
+AccelStepper stepperWheel(PO_STEPPER_EN, PO_WHEEL_STP, 0);
 
 void setup() {
   pinMode(PO_WHEEL_STP, OUTPUT);
